@@ -8,7 +8,7 @@ configuration.h
 #define USE_PROBE_FOR_Z_HOMING
 #define Z_MIN_PROBE_PIN PE5 // Pin 32 is the RAMPS default
 #define BLTOUCH
-#define NOZZLE_TO_PROBE_OFFSET { 10, 10, 0 } //adjust bl touch probe here
+#define NOZZLE_TO_PROBE_OFFSET { -38, -4, 0 }//z offset set to 4.33
 #define MULTIPLE_PROBING 2
 #define EXTRA_PROBING    1
 #define PROBING_HEATERS_OFF       // Turn heaters off when probing
