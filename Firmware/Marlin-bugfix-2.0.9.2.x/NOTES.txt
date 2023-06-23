@@ -1,0 +1,42 @@
+heterochromia
+
+configuration.h
+
+#define STRING_CONFIG_H_AUTHOR "Heterochromia fc77e99" // Who made the changes.
+#define Z_MIN_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop.
+#define Z_MIN_PROBE_ENDSTOP_INVERTING true // Set to true to invert the logic of the probe.
+#define USE_PROBE_FOR_Z_HOMING
+#define Z_MIN_PROBE_PIN PE5 // Pin 32 is the RAMPS default
+#define BLTOUCH
+#define NOZZLE_TO_PROBE_OFFSET { 10, 10, 0 } //adjust bl touch probe here
+#define MULTIPLE_PROBING 2
+#define EXTRA_PROBING    1
+#define PROBING_HEATERS_OFF       // Turn heaters off when probing
+#define PROBING_FANS_OFF          // Turn fans off when probing
+//  #define MIN_SOFTWARE_ENDSTOP_Z
+#define AUTO_BED_LEVELING_BILINEAR
+#define PREHEAT_BEFORE_LEVELING
+  #define LEVELING_NOZZLE_TEMP 200   // (°C) Only applies to E0 at this time
+  #define GRID_MAX_POINTS_X 5
+#define LCD_BED_LEVELING
+
+configuration_adv.h
+
+  #define BLTOUCH_DELAY 500
+    #define PROBE_OFFSET_WIZARD
+  #define BABYSTEP_ZPROBE_OFFSET          // Combine M851 Z and Babystepping
+//#define ADVANCED_PAUSE_FEATURE
+  #define PAUSE_PARK_RETRACT_FEEDRATE         60  // (mm/s) Initial retract feedrate. initial retreact feedrate.
+#define PINS_DEBUGGING
+
+conditional_LCD.h
+
+  //#if Z_MIN_PROBE_ENDSTOP_INVERTING
+    //#error "BLTOUCH requires Z_MIN_PROBE_ENDSTOP_INVERTING set to false. Please update your Configuration.h file."
+  //#endif
+
+//  #if ENABLED(Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN)
+  //  #if Z_MIN_ENDSTOP_INVERTING
+    //  #error "BLTOUCH requires Z_MIN_ENDSTOP_INVERTING set to false. Please update your Configuration.h file."
+    //#endif
+  //#endif
