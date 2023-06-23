@@ -17,6 +17,7 @@ configuration.h
 #define AUTO_BED_LEVELING_BILINEAR
 #define PREHEAT_BEFORE_LEVELING
   #define LEVELING_NOZZLE_TEMP 200   // (°C) Only applies to E0 at this time
+  //#define LEVELING_BED_TEMP     30
   #define GRID_MAX_POINTS_X 5
 #define LCD_BED_LEVELING
 
